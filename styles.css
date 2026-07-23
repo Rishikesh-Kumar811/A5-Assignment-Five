@@ -764,9 +764,9 @@ section.approach-title {
    position: absolute;
    bottom: 0;
    right: 0;
-   left: 18%;
-   height: 0.5px;
-   background-color: rgb(228 228 231);
+   left: calc(22% - clamp(24px, 4vw, 60px));
+   height: 1px;
+   background-color: #e4e4e7;
 }
 
 .testimonial-logo-col {
@@ -1517,7 +1517,14 @@ span.team-role:hover {
    font-size: 11px;
    font-weight: 600;
    padding: 0 6px;
-   margin-left: 4px;
+   margin-left: clamp(0px, 0.1vw, 2px);
+   vertical-align: middle;
+}
+
+.ri-arrow-drop-down-line {
+   margin-left: clamp(-3px, -0.2vw, -1px);
+   display: inline-block;
+   font-size: 1.25em;
    vertical-align: middle;
 }
 
@@ -1811,7 +1818,7 @@ span.team-role:hover {
    font-size: clamp(12px, 0.9vw, 14px);
    line-height: 1;
    font-weight: 400;
-   padding: clamp(6px, 0.5vw, 8px) clamp(16px, 1.2vw, 22px);
+   padding: clamp(6px, 0.5vw, 8px) clamp(10px, 0.8vw, 15px);
    border-radius: 9999px;
    border: 1.5px solid #000000;
    background-color: #ffffff;
@@ -2122,6 +2129,26 @@ section.approach-title {
    .nav-links .hero-section {
       padding: clamp(7px, 0.75vw, 13px) clamp(12px, 1.1vw, 21px);
       font-size: clamp(13px, 0.98vw, 19.5px);
+   }
+
+   .approach-label {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: clamp(11.5px, 0.78vw + 2px, 14.8px);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #52525b;
+      line-height: 1.2;
+   }
+
+   .testimonial-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: calc(22% - clamp(24px, 4vw, 60px));
+      height: 1px;
+      background-color: #e4e4e7;
+      display: block;
    }
 }
 
@@ -2554,7 +2581,7 @@ section.approach-title {
       font-size: clamp(11.5px, 1.3vw, 13.5px) !important;
       line-height: 1 !important;
       font-weight: 500 !important;
-      padding: clamp(5px, 0.7vw, 7px) clamp(12px, 1.4vw, 16px) !important;
+      padding: clamp(5px, 0.7vw, 7px) clamp(8px, 0.9vw, 11px) !important;
       border-radius: 9999px !important;
       border: 1.2px solid #18181b !important;
       background-color: #ffffff !important;
@@ -3101,7 +3128,7 @@ section.approach-title {
       border-radius: 9999px !important;
       border: 1.2px solid #18181b !important;
       background-color: #ffffff !important;
-      padding: clamp(8px, 1.8vw, 10px) clamp(14px, 3.4vw, 19px) !important;
+      padding: clamp(8px, 1.8vw, 10px) clamp(9px, 2.2vw, 13px) !important;
       color: #18181b !important;
       cursor: pointer !important;
       white-space: nowrap !important;
@@ -3128,10 +3155,6 @@ section.approach-title {
    .testimonial-logo-alt img {
       margin-left: 0;
       transform: none;
-   }
-
-   .testimonial-section::after {
-      left: calc(22% + clamp(-60px, -7.5vw, -30px));
    }
 
    .team-label {
@@ -3329,7 +3352,7 @@ section.approach-title {
       border-radius: 9999px;
       border: 1px solid black;
       background-color: white;
-      padding: clamp(5px, 0.7vw, 7px) clamp(12px, 1.8vw, 18px);
+      padding: clamp(5px, 0.7vw, 7px) clamp(8px, 1.1vw, 12px);
       color: black;
       cursor: pointer;
       white-space: nowrap;
@@ -3341,28 +3364,6 @@ section.approach-title {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-   }
-
-   .statement-text-right {
-      height: auto;
-      min-height: auto;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-   }
-
-   .testimonial-logo-col img {
-      margin-left: 0;
-      transform: none;
-   }
-
-   .testimonial-logo-alt img {
-      margin-left: 0;
-      transform: none;
-   }
-
-   .testimonial-section::after {
-      left: calc(22% + clamp(-60px, -7.5vw, -30px));
    }
 
    .team-label {
@@ -3722,7 +3723,7 @@ section.approach-title {
       font-size: clamp(12px, 3.2vw, 14px) !important;
       line-height: 1.2 !important;
       font-weight: 500 !important;
-      padding: clamp(6px, 1.5vw, 9px) clamp(16px, 3.5vw, 22px) !important;
+      padding: clamp(6px, 1.5vw, 9px) clamp(10px, 2.2vw, 14px) !important;
       border-radius: 9999px !important;
       border: 1.5px solid #000000 !important;
       background-color: #ffffff !important;

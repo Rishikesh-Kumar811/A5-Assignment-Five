@@ -470,7 +470,6 @@
       </footer>
    </main>
    <script>
-      // Close mobile menu when a link is clicked
       document.querySelectorAll('.nav-links a, .nav-links .nav-cart').forEach(link => {
          link.addEventListener('click', () => {
             const toggle = document.getElementById('menu-toggle');
@@ -479,7 +478,6 @@
             }
          });
       });
-      // Instant text deselection on click anywhere
       document.addEventListener('pointerdown', (e) => {
          const selection = window.getSelection();
          if (selection && selection.toString().length > 0) {
