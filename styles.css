@@ -1,17 +1,133 @@
 html {
    font-size: clamp(100px, 10.416vw, 200px);
-   scrollbar-width: thin;
-   scrollbar-color: #a1a1aa transparent;
+   scrollbar-width: none !important;
+   -ms-overflow-style: none !important;
+   scroll-behavior: smooth;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   text-rendering: optimizeLegibility !important;
 }
 
-html::-webkit-scrollbar {
-   width: 10px;
+body {
+   scrollbar-width: none !important;
+   -ms-overflow-style: none !important;
+   -webkit-font-smoothing: antialiased !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   text-rendering: optimizeLegibility !important;
 }
 
-html::-webkit-scrollbar-thumb {
-   background-color: #a1a1aa;
-   border: 3px solid #ffffff;
-   border-radius: 9999px;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+   display: none !important;
+   width: 0 !important;
+   height: 0 !important;
+   background: transparent !important;
+}
+
+*,
+*::before,
+*::after {
+   scrollbar-width: none !important;
+   -ms-overflow-style: none !important;
+   -webkit-user-select: none !important;
+   -moz-user-select: none !important;
+   -ms-user-select: none !important;
+   user-select: none !important;
+   -webkit-user-drag: none !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+label,
+b,
+strong,
+i,
+em,
+blockquote,
+li,
+code,
+pre {
+   -webkit-user-select: text !important;
+   -moz-user-select: text !important;
+   -ms-user-select: text !important;
+   user-select: text !important;
+}
+
+img,
+svg,
+picture,
+figure,
+button,
+input,
+textarea,
+select,
+.nav-logo,
+.menu-toggle-label,
+.social-overlay,
+.approach-card-yellow,
+.card-partner {
+   -webkit-user-select: none !important;
+   -moz-user-select: none !important;
+   -ms-user-select: none !important;
+   user-select: none !important;
+   -webkit-user-drag: none !important;
+}
+
+img,
+picture img,
+figure img,
+video,
+svg {
+   object-position: center center !important;
+   image-rendering: auto !important;
+   max-width: 100%;
+   height: auto;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+
+*,
+*::before,
+*::after {
+   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+a,
+button,
+.partner-card-yellow,
+.nav-btn,
+.contact-btn,
+.social-item,
+img,
+.nav-links,
+.approach-card-yellow,
+.card-partner {
+   transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+.approach-card-yellow,
+.card-partner,
+.team-cta-title,
+.contact-btn,
+.nav-links,
+.nav-bar {
+   will-change: transform, opacity;
+}
+
+section,
+.team-cta-title,
+.contact-section,
+footer {
+   content-visibility: auto !important;
+   contain-intrinsic-size: 1px 500px !important;
 }
 
 .menu-toggle-input {
@@ -38,7 +154,6 @@ html::-webkit-scrollbar-thumb {
    border-width: 0;
    border-color: #e5e7eb;
 }
-
 
 :root {
    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -1500,7 +1615,7 @@ span.team-role:hover {
 
    padding-right: calc(clamp(90px, 9vw, 130px) + 130px);
 
-   animation: scrol 20s infinite linear;
+   animation: scrol 15s infinite linear;
    will-change: transform;
    backface-visibility: hidden;
    -webkit-backface-visibility: hidden;
@@ -2007,10 +2122,22 @@ section.approach-title {
    }
 }
 
-
 @media (min-width: 1025px) {
    .nav-bar .nav-links .nav-btn {
       transform: translateY(-1.5px) !important;
+   }
+
+   .nav-bar .nav-left {
+      gap: clamp(7px, 0.6vw, 11px) !important;
+   }
+
+   .nav-bar .nav-left .nav-logo {
+      width: clamp(89px, 6.2vw, 109px) !important;
+   }
+
+   .nav-bar .nav-left .nav-hire-btn {
+      font-size: clamp(11.2px, 0.82vw, 12.8px) !important;
+      padding: clamp(4.5px, 0.35vw, 6.5px) clamp(6.5px, 0.5vw, 9px) !important;
    }
 }
 
@@ -2021,7 +2148,6 @@ section.approach-title {
 .nav-close-btn {
    display: none;
 }
-
 
 @media (max-width: 1024px) {
    .main-container {
@@ -2046,15 +2172,15 @@ section.approach-title {
    }
 
    .nav-hire-btn {
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      max-width: none;
-      flex-shrink: 0;
-      padding: clamp(2px, 0.2vw, 4px) clamp(6px, 0.6vw, 9px);
-      font-size: clamp(10px, 0.95vw, 12px);
-      line-height: 1.1;
+      white-space: nowrap !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      max-width: none !important;
+      flex-shrink: 0 !important;
+      padding: clamp(4px, 0.4vw, 6px) clamp(5.5px, 0.6vw, 8px) !important;
+      font-size: clamp(10.5px, 1vw, 12.5px) !important;
+      line-height: 1.1 !important;
    }
 
    .nav-bar .nav-left {
@@ -2087,9 +2213,10 @@ section.approach-title {
       height: 100vh;
       background: rgba(0, 0, 0, 0.5);
       z-index: 900;
-      display: none;
+      display: block !important;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
    }
@@ -2097,7 +2224,7 @@ section.approach-title {
    .nav-bar .nav-links {
       position: fixed;
       top: 0;
-      right: -100%;
+      right: 0 !important;
       height: 100dvh;
       width: clamp(230px, 65vw, 270px) !important;
       max-width: 75vw !important;
@@ -2105,16 +2232,20 @@ section.approach-title {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: clamp(20px, 3.5vw, 28px) clamp(18px, 3vw, 24px) clamp(24px, 4vw, 32px) clamp(18px, 3vw, 24px) !important;
+      padding: clamp(20px, 3.5vw, 28px) clamp(18px, 3vw, 24px) clamp(24px, 4vw, 32px)
+         clamp(18px, 3vw, 24px) !important;
       gap: clamp(14px, 2.2vw, 20px) !important;
-      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate3d(100%, 0, 0) !important;
+      will-change: transform !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
       z-index: 1000;
-      transform: none;
       box-shadow: -10px 0 40px rgba(0, 0, 0, 0.12);
       border-top-left-radius: 24px !important;
       border-bottom-left-radius: 24px !important;
       box-sizing: border-box;
       overflow-y: auto;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
    }
 
    .nav-close-btn {
@@ -2133,7 +2264,9 @@ section.approach-title {
       margin-right: 0;
       padding: 0;
       border: none;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      transition:
+         background-color 0.2s ease,
+         transform 0.2s ease;
       -webkit-tap-highlight-color: transparent;
    }
 
@@ -2152,7 +2285,9 @@ section.approach-title {
       display: flex;
       align-items: center;
       width: 100%;
-      transition: transform 0.25s ease, color 0.25s ease;
+      transition:
+         transform 0.25s ease,
+         color 0.25s ease;
    }
 
    .nav-bar .nav-links > a:hover {
@@ -2188,12 +2323,12 @@ section.approach-title {
    }
 
    .nav-bar .menu-toggle-input:checked ~ .nav-links {
-      right: 0 !important;
+      transform: translate3d(0, 0, 0) !important;
    }
 
    .nav-bar .menu-toggle-input:checked ~ .menu-backdrop {
-      display: block !important;
       opacity: 1 !important;
+      pointer-events: auto !important;
    }
 
    .nav-bar .nav-links .hero-section {
@@ -2213,7 +2348,9 @@ section.approach-title {
       font-size: clamp(14px, 1.8vw, 15.5px) !important;
       font-weight: 500;
       text-decoration: none;
-      transition: background-color 0.25s ease, transform 0.25s ease;
+      transition:
+         background-color 0.25s ease,
+         transform 0.25s ease;
    }
 
    .nav-bar .nav-links .hero-section:hover {
@@ -2221,7 +2358,6 @@ section.approach-title {
       transform: translateY(-2px);
    }
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
    .contact-section {
@@ -2317,7 +2453,9 @@ section.approach-title {
       align-items: center !important;
       justify-content: center !important;
       gap: 1.7px !important;
-      transition: background-color 0.25s ease, transform 0.25s ease !important;
+      transition:
+         background-color 0.25s ease,
+         transform 0.25s ease !important;
    }
 
    .contact-btn i {
@@ -2333,6 +2471,177 @@ section.approach-title {
 
    .contact-btn:hover i {
       transform: translate(3px, -3px) !important;
+   }
+
+   .team-cta-title,
+   .approach-grid,
+   .work-footer {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: clamp(20px, 3.5vw, 32px) !important;
+      width: 100% !important;
+   }
+
+   .team-cta-title .team-img,
+   .work-card,
+   .approach-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+   }
+
+   .team-cta-title .blog-title,
+   .team-socials,
+   .work-card .blog-title,
+   .approach-card .blog-title,
+   .blog-title {
+      height: auto !important;
+      max-height: clamp(285px, 36vw, 380px) !important;
+      aspect-ratio: 1 / 1 !important;
+      overflow: hidden !important;
+   }
+
+   .team-cta-title .blog-title img,
+   .team-socials img,
+   .team-socials .team-footer,
+   .work-card img,
+   .approach-card img,
+   .blog-title img,
+   .blog-btn img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center 23% !important;
+   }
+
+   .team-name,
+   .work-details {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      gap: clamp(10px, 1.8vw, 16px) !important;
+      margin-top: clamp(10px, 1.5vw, 16px) !important;
+      padding: 0 2px !important;
+      box-sizing: border-box !important;
+   }
+
+   .work-title,
+   .team-name h4,
+   .work-details h4 {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(15.5px, 2vw, 19px) !important;
+      font-weight: 600 !important;
+      line-height: 1.25 !important;
+      color: #111111 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      margin: 0 !important;
+      flex: 1 !important;
+      min-width: 0 !important;
+   }
+
+   .work-category,
+   .team-role,
+   .team-name span,
+   .work-details span {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(11.5px, 1.3vw, 13.5px) !important;
+      line-height: 1 !important;
+      font-weight: 500 !important;
+      padding: clamp(5px, 0.7vw, 7px) clamp(12px, 1.4vw, 16px) !important;
+      border-radius: 9999px !important;
+      border: 1.2px solid #18181b !important;
+      background-color: #ffffff !important;
+      color: #18181b !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      margin: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
+   }
+
+   .team-cta-desc {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      background-color: #f7f7f8 !important;
+      border-radius: 12px !important;
+      padding: clamp(24px, 3.2vw, 36px) clamp(20px, 2.8vw, 30px) !important;
+      box-sizing: border-box !important;
+      height: 100% !important;
+      min-height: 100% !important;
+   }
+
+   .team-cta-desc .statement-top {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(11.5px, 1.3vw, 13.5px) !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.12em !important;
+      color: #18181b !important;
+      margin: 0 0 clamp(14px, 1.8vw, 20px) 0 !important;
+      opacity: 0.8 !important;
+   }
+
+   .team-cta-desc .team-cta-btn {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(22px, 3vw, 32px) !important;
+      font-weight: 500 !important;
+      line-height: 1.18 !important;
+      letter-spacing: -0.025em !important;
+      color: #111111 !important;
+      margin: 0 0 clamp(12px, 1.5vw, 18px) 0 !important;
+      text-wrap: balance !important;
+      word-break: normal !important;
+   }
+
+   .team-cta-desc .team-cta-btn br {
+      display: none !important;
+   }
+
+   .team-cta-desc .team-member {
+      font-family: 'Inter', system-ui, sans-serif !important;
+      font-size: clamp(13.5px, 1.6vw, 16px) !important;
+      line-height: 1.45 !important;
+      font-weight: 400 !important;
+      color: #52525b !important;
+      margin: 0 0 clamp(22px, 3vw, 34px) 0 !important;
+      text-wrap: pretty !important;
+      word-break: normal !important;
+   }
+
+   .team-cta-desc .team-member br {
+      display: none !important;
+   }
+
+   .team-cta-desc .team-img-wrapper {
+      margin-top: auto !important;
+      border-radius: 9999px !important;
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      padding: clamp(15px, 1.9vw, 19px) clamp(22px, 2.8vw, 30px) !important;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(13px, 1.5vw, 15px) !important;
+      font-weight: 500 !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition:
+         background-color 0.25s ease,
+         transform 0.25s ease !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+   }
+
+   .team-cta-desc .team-img-wrapper:hover {
+      background-color: #27272a !important;
+      transform: translateY(-2px) !important;
    }
 }
 
@@ -2616,7 +2925,8 @@ section.approach-title {
       height: auto;
       min-height: auto;
       margin-top: 0;
-      padding: clamp(28px, 4vw, 44px) clamp(12px, 2vw, 18px) clamp(36px, 5vw, 56px) clamp(12px, 2vw, 18px);
+      padding: clamp(28px, 4vw, 44px) clamp(12px, 2vw, 18px) clamp(36px, 5vw, 56px)
+         clamp(12px, 2vw, 18px);
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -2705,16 +3015,17 @@ section.approach-title {
    }
 
    .team-cta-desc .team-img-wrapper {
-      margin-top: auto;
-      align-self: flex-start;
-      transform: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(14px, 1.8vw, 18px) clamp(30px, 3.5vw, 40px);
-      font-size: clamp(15px, 1.5vw, 18px);
-      font-weight: 600;
-      border-radius: 999px;
+      margin-top: auto !important;
+      align-self: flex-start !important;
+      transform: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: clamp(16px, 4vw, 19.5px) clamp(18px, 4.2vw, 24px) !important;
+      font-size: clamp(15.5px, 3.8vw, 18.5px) !important;
+      font-weight: 600 !important;
+      border-radius: 9999px !important;
+      gap: 6px !important;
    }
 
    .team-img-wrapper:hover {
@@ -2749,7 +3060,7 @@ section.approach-title {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 27% !important;
       display: block;
       transform: none;
    }
@@ -2765,36 +3076,37 @@ section.approach-title {
    }
 
    .team-name .values-section {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      font-size: clamp(18px, 2.2vw, 24px);
-      font-weight: 400;
-      color: black;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      transform: translateY(-3px);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(17px, 4.2vw, 22px) !important;
+      font-weight: 500 !important;
+      color: #111111 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.2 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      transform: none !important;
    }
 
-   .team-role {
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      font-size: clamp(11px, 1.3vw, 13px);
-      border-radius: 9999px;
-      border: 1px solid black;
-      background-color: white;
-      padding: clamp(5px, 0.7vw, 7px) clamp(12px, 1.8vw, 18px);
-      color: black;
-      cursor: pointer;
-      white-space: nowrap;
-      transition:
-         background-color 0.25s ease,
-         color 0.25s ease;
-      margin: 0;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+   .team-role,
+   .work-category,
+   .team-name span,
+   .work-details span {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(11.5px, 2.8vw, 13px) !important;
+      font-weight: 500 !important;
+      border-radius: 9999px !important;
+      border: 1.2px solid #18181b !important;
+      background-color: #ffffff !important;
+      padding: clamp(8px, 1.8vw, 10px) clamp(14px, 3.4vw, 19px) !important;
+      color: #18181b !important;
+      cursor: pointer !important;
+      white-space: nowrap !important;
+      margin: 0 !important;
+      line-height: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
    }
 
    .statement-text-right {
@@ -3105,6 +3417,41 @@ section.approach-title {
       padding-bottom: clamp(16px, 2.5vw, 24px);
    }
 
+   .approach-label {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(11.5px, 2.8vw, 13.5px) !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.12em !important;
+      color: #71717a !important;
+   }
+
+   .team-cta-label {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(22px, 5.5vw, 28px) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.025em !important;
+      color: #111111 !important;
+      line-height: 1.18 !important;
+   }
+
+   .work-img {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      font-size: clamp(12px, 3vw, 13.5px) !important;
+      font-weight: 500 !important;
+      padding: clamp(9px, 2.2vw, 11.5px) clamp(11px, 2.5vw, 15px) !important;
+      border-radius: 9999px !important;
+      border: 1.2px solid #18181b !important;
+      background-color: #ffffff !important;
+      color: #18181b !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
+   }
+
    .team-cta-title,
    .blog-header,
    .service-link {
@@ -3268,20 +3615,59 @@ section.approach-title {
       word-break: break-word !important;
    }
 
-   .footer-btn,
-   .footer-cms-links {
-      width: auto !important;
-      max-width: 100% !important;
-      display: inline-flex !important;
+   footer.footer-links {
+      display: flex !important;
+      flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
-      white-space: nowrap !important;
-      padding: clamp(10px, 2vw, 14px) clamp(18px, 3.5vw, 26px) !important;
-      font-size: clamp(13px, 3.2vw, 15px) !important;
+      text-align: center !important;
+      gap: clamp(10px, 2.5vw, 14px) !important;
+      width: 100% !important;
+      padding: clamp(12px, 2.5vw, 18px) clamp(16px, 3.5vw, 24px) clamp(18px, 3.5vw, 26px)
+         clamp(16px, 3.5vw, 24px) !important;
       box-sizing: border-box !important;
+      margin-top: clamp(6px, 1.5vw, 12px) !important;
+      border-top: none !important;
    }
 
-   
+   footer.footer-links .footer-btn {
+      width: 100% !important;
+      max-width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      font-size: clamp(11.5px, 2.9vw, 13.5px) !important;
+      line-height: 1.5 !important;
+      color: #52525b !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      white-space: normal !important;
+   }
+
+   footer.footer-links .footer-cms-links {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: clamp(20px, 5vw, 32px) !important;
+      font-size: clamp(11.5px, 2.9vw, 13.5px) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+   }
+
+   footer.footer-links .footer-legal-link {
+      font-size: clamp(11.5px, 2.9vw, 13.5px) !important;
+      color: #71717a !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.25s ease !important;
+   }
+
+   footer.footer-links .footer-legal-link:hover {
+      color: #000000 !important;
+   }
+
    .work-footer,
    .approach-grid {
       display: flex !important;
@@ -3347,13 +3733,13 @@ section.approach-title {
       box-sizing: border-box !important;
    }
 
-   
    .contact-section {
       display: flex !important;
       flex-direction: column !important;
       align-items: flex-start !important;
       width: 100% !important;
-      padding: clamp(28px, 6vw, 44px) clamp(16px, 4vw, 24px) clamp(32px, 6vw, 48px) clamp(16px, 4vw, 24px) !important;
+      padding: clamp(28px, 6vw, 44px) clamp(16px, 4vw, 24px) clamp(32px, 6vw, 48px)
+         clamp(16px, 4vw, 24px) !important;
       box-sizing: border-box !important;
       gap: clamp(12px, 3vw, 20px) !important;
       margin-top: clamp(24px, 4vw, 48px) !important;
@@ -3411,7 +3797,6 @@ section.approach-title {
       margin-top: clamp(20px, 4vw, 32px) !important;
    }
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
    .approach-grid,
