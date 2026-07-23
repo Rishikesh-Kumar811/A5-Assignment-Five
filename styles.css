@@ -341,13 +341,16 @@ button {
    height: 100%;
    align-items: center;
    gap: clamp(8px, 0.75vw, 12px);
+   flex-shrink: 0;
 }
 
 .nav-logo {
-   width: clamp(74px, 5.2vw, 96px);
+   width: clamp(102px, 7vw, 128px);
    display: block;
    max-width: 100%;
    height: auto;
+   flex-shrink: 0;
+   object-fit: contain;
 }
 
 .nav-hire-btn {
