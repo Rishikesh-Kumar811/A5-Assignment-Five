@@ -2,7 +2,6 @@ html {
    font-size: clamp(100px, 10.416vw, 200px);
    scrollbar-width: none !important;
    -ms-overflow-style: none !important;
-   scroll-behavior: smooth;
    -webkit-font-smoothing: antialiased !important;
    -moz-osx-font-smoothing: grayscale !important;
    text-rendering: optimizeLegibility !important;
@@ -110,7 +109,7 @@ img,
 .nav-links,
 .approach-card-yellow,
 .card-partner {
-   transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) !important;
+   transition: opacity 2s cubic-bezier(0.19, 1, 0.22, 1), transform 2s cubic-bezier(0.19, 1, 0.22, 1), background-color 2s cubic-bezier(0.19, 1, 0.22, 1), color 2s cubic-bezier(0.19, 1, 0.22, 1) !important;
 }
 
 .approach-card-yellow,
@@ -264,11 +263,12 @@ button {
    align-items: center;
    justify-content: flex-end;
    background: transparent;
-   bottom: -80px;
+   bottom: 16px;
    right: 16px;
    left: auto;
    position: absolute;
-   transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+   transform: translateY(96px);
+   transition: opacity 0.45s cubic-bezier(0.19, 1, 0.22, 1), transform 0.45s cubic-bezier(0.19, 1, 0.22, 1);
    gap: 8px;
    padding: 0;
    margin: 0;
@@ -278,7 +278,7 @@ button {
 }
 
 .team-socials:hover .social-overlay {
-   bottom: 16px;
+   transform: translateY(0);
    opacity: 1;
    pointer-events: auto;
 }
@@ -316,7 +316,7 @@ button {
    left: 0;
    background-color: black;
    transform-origin: bottom left;
-   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+   transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s;
    transform: scaleX(0);
 }
 
@@ -524,14 +524,19 @@ section.approach-title {
    gap: 0.15rem;
 }
 
-.statement-section {
+.statement-section,
+.statement-body,
+.statement-col {
    display: flex;
    flex: 1 1 1.5625rem;
    max-width: 100%;
    height: auto;
    flex-direction: column;
-   background-color: rgb(248 248 248);
    padding: 0.3125rem;
+}
+
+.statement-section {
+   background-color: rgb(248 248 248);
 }
 
 .statement-top {
@@ -547,26 +552,17 @@ section.approach-title {
    font-weight: 300;
 }
 
-.statement-body {
-   display: flex;
-   flex: 1 1 1.5625rem;
-   max-width: 100%;
-   height: auto;
-   flex-direction: column;
-   background-color: rgb(248 237 227);
-   padding: 0.3125rem;
+.statement-body,
+.statement-col {
    text-transform: uppercase;
 }
 
+.statement-body {
+   background-color: rgb(248 237 227);
+}
+
 .statement-col {
-   display: flex;
-   flex: 1 1 1.5625rem;
-   max-width: 100%;
-   height: auto;
-   flex-direction: column;
    background-color: rgb(255 250 231);
-   padding: 0.3125rem;
-   text-transform: uppercase;
 }
 
 .statement-text-left {
@@ -749,14 +745,22 @@ section.approach-title {
    border-color: rgb(0 0 0);
 }
 
-.testimonial-section {
-   margin-top: 1rem;
+.testimonial-section,
+.testimonial-section-alt {
    display: flex;
    height: auto;
    width: 100%;
    justify-content: flex-end;
    gap: clamp(24px, 4vw, 60px);
    position: relative;
+}
+
+.testimonial-section {
+   margin-top: 1rem;
+}
+
+.testimonial-section-alt {
+   margin-top: 0.5rem;
 }
 
 .testimonial-section::after {
@@ -769,7 +773,8 @@ section.approach-title {
    background-color: #e4e4e7;
 }
 
-.testimonial-logo-col {
+.testimonial-logo-col,
+.testimonial-logo-alt {
    width: 20%;
 }
 
@@ -779,7 +784,8 @@ section.approach-title {
    height: auto;
 }
 
-.testimonial-content {
+.testimonial-content,
+.testimonial-content-alt {
    width: 58%;
    padding-right: 0.25rem;
    padding-bottom: clamp(12px, 1.8vw, 32px);
@@ -804,26 +810,6 @@ section.approach-title {
    margin-bottom: clamp(18px, 1.5vw, 28px);
    color: rgb(82 82 91);
    text-wrap: pretty;
-}
-
-.testimonial-section-alt {
-   margin-top: 0.5rem;
-   display: flex;
-   height: auto;
-   width: 100%;
-   justify-content: flex-end;
-   gap: clamp(24px, 4vw, 60px);
-}
-
-.testimonial-logo-alt {
-   width: 20%;
-}
-
-.testimonial-content-alt {
-   width: 58%;
-   padding-right: 0.25rem;
-   padding-bottom: clamp(12px, 1.8vw, 32px);
-   box-sizing: border-box;
 }
 
 .contact-section {
@@ -1625,7 +1611,7 @@ span.team-role:hover {
 
    padding-right: calc(clamp(90px, 9vw, 130px) + 130px);
 
-   animation: scrol 15s infinite linear;
+   animation: scrol 13s infinite linear;
    will-change: transform;
    backface-visibility: hidden;
    -webkit-backface-visibility: hidden;
@@ -1728,7 +1714,7 @@ span.team-role:hover {
    font-size: 0.0875rem;
    color: rgb(0 0 0);
    cursor: pointer;
-   transition: all 0.3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease;
 
    line-height: 0.125rem;
 }
@@ -2180,6 +2166,10 @@ section.approach-title {
 }
 
 @media (max-width: 1024px) {
+   .work-item-large {
+      transform: translateY(-15px) !important;
+   }
+
    .main-container {
       padding-top: clamp(75px, 9.5vw, 105px) !important;
    }
@@ -2390,6 +2380,10 @@ section.approach-title {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+   .work-item-large {
+      transform: translateY(0px) !important;
+   }
+
    .contact-section {
       margin-top: clamp(40px, 6vw, 80px) !important;
       display: flex !important;
@@ -2553,16 +2547,17 @@ section.approach-title {
       width: 100% !important;
       gap: clamp(10px, 1.8vw, 16px) !important;
       margin-top: clamp(10px, 1.5vw, 16px) !important;
-      padding: 0 2px !important;
+      padding: 0 8px !important;
+      transform: translateY(-10px) !important;
       box-sizing: border-box !important;
    }
 
-   .work-title,
+   .work-details .work-title,
    .team-name h4,
    .work-details h4 {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
       font-size: clamp(15.5px, 2vw, 19px) !important;
-      font-weight: 600 !important;
+      font-weight: 500 !important;
       line-height: 1.25 !important;
       color: #111111 !important;
       white-space: nowrap !important;
@@ -3517,11 +3512,14 @@ section.approach-title {
       max-width: clamp(100px, 15vw, 130px);
    }
 
+   .work-item-large {
+      transform: translateY(-16px) !important;
+   }
+
    .blog-header {
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 135px), 1fr)) !important;
       gap: clamp(10px, 1.4vw, 18px) !important;
-      margin-top: clamp(14px, 1.6vw, 24px) !important;
-      padding-bottom: clamp(14px, 1.6vw, 24px) !important;
+      margin-top: -5px !important;
    }
 
    .blog-header .statement-text-right {
@@ -3603,9 +3601,7 @@ section.approach-title {
    }
 
    .nav-bar {
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
    }
 
@@ -3677,8 +3673,13 @@ section.approach-title {
       display: flex !important;
       flex-direction: column !important;
       width: 100% !important;
-      gap: clamp(24px, 5vw, 36px) !important;
-      padding: clamp(16px, 3vw, 24px) 0 0 0 !important;
+      gap: clamp(14px, 3.5vw, 20px) !important;
+      padding: 0 !important;
+      margin-top: 0px !important;
+   }
+
+   .approach-grid {
+      margin-top: clamp(14px, 3.5vw, 20px) !important;
    }
 
    .work-footer .work-card,
@@ -3698,7 +3699,8 @@ section.approach-title {
       align-items: center !important;
       justify-content: space-between !important;
       gap: clamp(12px, 3vw, 20px) !important;
-      padding: 6px 2px 6px 2px !important;
+      padding: 6px 8px 6px 8px !important;
+      transform: translateY(-10px) !important;
       box-sizing: border-box !important;
    }
 
@@ -3706,7 +3708,7 @@ section.approach-title {
    .approach-grid .work-title {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
       font-size: clamp(17px, 4.5vw, 22px) !important;
-      font-weight: 600 !important;
+      font-weight: 500 !important;
       line-height: 1.25 !important;
       margin: 0 !important;
       color: #111111 !important;
