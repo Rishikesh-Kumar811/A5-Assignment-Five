@@ -3855,3 +3855,10 @@ section.approach-title {
       margin-top: 16px !important;
    }
 }
+
+@media (min-width: 769px) and (max-width: 790px) {
+   .section-label:nth-child(4) {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+   }
+}
