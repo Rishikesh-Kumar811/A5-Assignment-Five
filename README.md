@@ -1,16 +1,10 @@
 <div align="center">
 
-<br/><br/>
-
 <h1>🎨 Creative Agency Portfolio</h1>
 
 ### Design Agency Showcase with CSS-Only Animations
 
-<br/>
-
 A polished design agency portfolio featuring an infinite CSS marquee ticker, pure CSS hamburger navigation, and structured showcases for Work, Services, Team & Blog.
-
-<br/><br/>
 
 <p align="center">
   <a href="https://assignment-5-three-sage.vercel.app"><img src="https://img.shields.io/badge/▶_Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" /></a>&nbsp;
@@ -18,19 +12,13 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
   <a href="https://github.com/Rishikesh-Kumar811/A5-Assignment-Five/issues"><img src="https://img.shields.io/badge/Request_Feature-8B5CF6?style=for-the-badge" alt="Request Feature" /></a>
 </p>
 
-<br/>
-
 </div>
-
-<br/>
 
 <h2 align="center">🛠️ Tech Stack</h2>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css" alt="Tech Stack" />
 </p>
-
-<br/>
 
 <h2 align="center">✨ Features</h2>
 
@@ -42,13 +30,9 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 | 📸 **Optimized WebP Showcases** | Project thumbnails and team photos in modern `.webp` format |
 | 📐 **Modular Section Architecture** | Clean, section-partitioned CSS structure for maintainability |
 
-<br/>
-
 <h2 align="center">🏗️ Architecture</h2>
 
 > Zero-dependency agency website with modular CSS section architecture and CSS-only interactive components.
-
-<br/>
 
 <h2 align="center">🚀 Quick Start</h2>
 
@@ -60,11 +44,7 @@ git clone https://github.com/Rishikesh-Kumar811/A5-Assignment-Five.git
 cd A5-Assignment-Five && open index.html
 \`\`\`
 
-<br/>
-
 <div align="center">
-
-<br/>
 
 <h3>Built with ❤️ by <a href="https://github.com/Rishikesh-Kumar811">Rishikesh</a></h3>
 
