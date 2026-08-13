@@ -32,7 +32,7 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 
 <br/>
 
-<h3 align="center">✨ Features</h3>
+<h2 align="center">✨ Features</h2>
 
 | 🎯 Core Feature | ✨ Technical Implementation |
 | :--- | :--- |
