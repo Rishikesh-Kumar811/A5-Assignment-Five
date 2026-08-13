@@ -22,7 +22,11 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 
 </div>
 
+<br/>
+
 ---
+
+<br/>
 
 ## 🛠️ Tech Stack
 
@@ -30,7 +34,11 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
   <img src="https://skillicons.dev/icons?i=html,css" alt="Tech Stack" />
 </p>
 
+<br/>
+
 ---
+
+<br/>
 
 ## ✨ Features
 
@@ -40,13 +48,21 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 - 📸 **Optimized WebP Showcases** — Project thumbnails and team photos in modern `.webp` format
 - 📐 **Modular Section Architecture** — Clean, section-partitioned CSS structure for maintainability
 
+<br/>
+
 ---
+
+<br/>
 
 ## 🏗️ Architecture
 
 > Zero-dependency agency website with modular CSS section architecture and CSS-only interactive components.
 
+<br/>
+
 ---
+
+<br/>
 
 ## 🚀 Quick Start
 
@@ -57,6 +73,8 @@ git clone https://github.com/Rishikesh-Kumar811/A5-Assignment-Five.git
 # Open in browser
 cd A5-Assignment-Five && open index.html
 \`\`\`
+
+<br/>
 
 ---
 
