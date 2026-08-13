@@ -24,7 +24,7 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 
 <br/>
 
-<h3 align="center">🛠️ Tech Stack</h3>
+<h2 align="center">🛠️ Tech Stack</h2>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css" alt="Tech Stack" />
@@ -44,13 +44,13 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 
 <br/>
 
-<h3 align="center">🏗️ Architecture</h3>
+<h2 align="center">🏗️ Architecture</h2>
 
 > Zero-dependency agency website with modular CSS section architecture and CSS-only interactive components.
 
 <br/>
 
-<h3 align="center">🚀 Quick Start</h3>
+<h2 align="center">🚀 Quick Start</h2>
 
 \`\`\`bash
 # Clone the repository
