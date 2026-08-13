@@ -34,11 +34,13 @@ A polished design agency portfolio featuring an infinite CSS marquee ticker, pur
 
 <h2 align="center">✨ Features</h2>
 
-- 🎠 **Infinite Logo Marquee** — Continuous horizontal ticker driven by pure CSS `@keyframes` animations
-- ☰ **Pure CSS Hamburger Nav** — Mobile drawer using hidden checkbox state (`#menu-toggle`) and CSS selectors
-- 🎨 **Remix Icon Integration** — 2000+ scalable vector icons via `remixicon@4.5.0` CDN
-- 📸 **Optimized WebP Showcases** — Project thumbnails and team photos in modern `.webp` format
-- 📐 **Modular Section Architecture** — Clean, section-partitioned CSS structure for maintainability
+| 🎯 Core Feature | ✨ Technical Implementation |
+| :--- | :--- |
+| 🎠 **Infinite Logo Marquee** | Continuous horizontal ticker driven by pure CSS `@keyframes` animations |
+| ☰ **Pure CSS Hamburger Nav** | Mobile drawer using hidden checkbox state (`#menu-toggle`) and CSS selectors |
+| 🎨 **Remix Icon Integration** | 2000+ scalable vector icons via `remixicon@4.5.0` CDN |
+| 📸 **Optimized WebP Showcases** | Project thumbnails and team photos in modern `.webp` format |
+| 📐 **Modular Section Architecture** | Clean, section-partitioned CSS structure for maintainability |
 
 <br/>
 
